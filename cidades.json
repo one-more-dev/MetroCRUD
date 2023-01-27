@@ -1,0 +1,22 @@
+{
+    "cidades":[
+        {"cod":1,
+        "foto":"./imgs/saopaulo.jpeg",
+        "nome":"Sao Paulo",
+        "pais":"Brazil",
+        "pop":22
+        },
+        {"cod":2,
+        "foto":"./imgs/lima.jpeg",
+        "nome":"Lima",
+        "pais":"Peru",
+        "pop":10
+        },
+        {"cod":3,
+        "foto":"./imgs/lagos.png",
+        "nome":"Lagos",
+        "pais":"Nigeria",
+        "pop":22
+        }
+    ]
+}
