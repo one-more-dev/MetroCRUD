@@ -1,0 +1,30 @@
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    text-transform: uppercase;
+}
+main{
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 1%;
+}
+#cidade{
+    display: inline-block;
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    border: solid rgb(97, 97, 97) 5px;
+    border-radius: 3px;
+}
