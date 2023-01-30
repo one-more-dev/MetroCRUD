@@ -1,10 +1,30 @@
 
+//  LOAD THE OBJECTS IN JSON
 async function loadCard(){
     const conexion = await fetch(`http://localhost:3000/cidades`);
-    console.log(conexion) //the conection before the convert
     const conexionConverted = await conexion.json();
     return conexionConverted;
 }
 
 
-export{ loadCard }
+//  INSERT NEW OBJECTS IN JSON
+async function insertCard(imgdacidade="",nomedacidade,pais,populacao){
+    const conexion = await fetch(`http://localhost:3000/cidades`,
+        { method: `POST`,
+        headers:{ "Content-type" : "application/json" },
+        body:JSON.stringify({
+            foto: imgdacidade,
+            nome: nomedacidade,
+            pais: pais,
+            pop: populacao
+        })
+    })
+    const conexionConverted = await conexion.json();
+    return conexionConverted;
+}
+
+
+//  DELETE EXISTING OBJECTS
+
+
+export{ loadCard, insertCard }
