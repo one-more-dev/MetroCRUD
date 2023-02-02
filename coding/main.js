@@ -24,7 +24,6 @@ async function insertCard(imgdacidade="",nomedacidade,pais,populacao){
 }
 
 
-//  DELETE EXISTING OBJECTS
 
 
 export{ loadCard, insertCard }

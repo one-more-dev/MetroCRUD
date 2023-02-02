@@ -37,18 +37,11 @@ async function insertCardValues(evento){
     try{
         console.log(photoField,nameField,countryField,popField);
         insertCard(photoField,nameField,countryField,popField);
-        console.log("It's done");
     }catch(erro){
         console.log(`This is the error: ${erro}`);
         window.alert("Some empty field, maybe?");
     }
 }
-
-/*
-function buttonCancel(referencia){
-    const elemento = document.querySelector(referencia);
-    elemento.style.color = "green";
-}*/
 
 
 function buttonAction(referencia,corpo){
