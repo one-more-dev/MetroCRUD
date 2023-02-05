@@ -1,5 +1,5 @@
 import { loadCard } from "./main.js";
-
+import { deleteCity } from "./cityDelete.js";
 
 const principal = document.querySelector("[data-principal]");
 
@@ -18,8 +18,10 @@ export function newCity(imagem,cidade,pais,pop){
 async function showCities(){
     const api = await loadCard();
     api.forEach(card => { principal.appendChild(newCity(card.foto,card.nome,card.pais,card.pop)); });
+    deleteCity();
 }
 
 
 showCities();
+
 

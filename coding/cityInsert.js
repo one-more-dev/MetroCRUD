@@ -44,12 +44,6 @@ async function insertCardValues(evento){
     }
 }
 
-/*
-function buttonCancel(referencia){
-    const elemento = document.querySelector(referencia);
-    elemento.style.color = "green";
-}*/
-
 
 function buttonAction(referencia,corpo){
     const botao = document.querySelector(referencia);
