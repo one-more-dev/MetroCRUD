@@ -1,5 +1,6 @@
 import { loadCard } from "./main.js";
 import { editCity } from "./cityModify2.js";
+import {deleteCity} from "./cityDelete.js";
 
 
 const principal = document.querySelector("[data-principal]");
@@ -23,6 +24,7 @@ async function showCities(){
     const api = await loadCard();
     api.forEach(card => { principal.appendChild(newCity(card.foto,card.nome,card.pais,card.pop)); });
     editCity(".cidade");
+    deleteCity();
 }
 
 

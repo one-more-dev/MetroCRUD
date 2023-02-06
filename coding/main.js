@@ -23,8 +23,11 @@ async function insertCard(metodo,id,imgdacidade="",nomedacidade,pais,populacao){
 }
 
 
-//async function updateCard(item,element)
+async function deleteCard(item){
+    const conexion = await fetch(`http://localhost:3000/cidades/${item}`, { method: `DELETE`});
+    const conexionConverted = conexion.json();
+    return conexionConverted;
+}
 
 
-
-export{ loadCard, insertCard }
+export{ loadCard, insertCard, deleteCard }
