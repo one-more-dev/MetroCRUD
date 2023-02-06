@@ -22,7 +22,7 @@
       "pop": 22
     },
     {
-      "foto": "C:\\fakepath\\seoul.jpg",
+      "foto": "./imgs/seoul.jpg",
       "nome": "Seoul",
       "pais": "South Korea",
       "pop": "26",
