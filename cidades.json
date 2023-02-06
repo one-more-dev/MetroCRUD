@@ -1,11 +1,11 @@
 {
   "cidades": [
     {
-      "id": 1,
       "foto": "./imgs/saopaulo.jpeg",
-      "nome": "Sao Paulo",
+      "nome": "Greater Sao Paulo",
       "pais": "Brazil",
-      "pop": 22
+      "pop": "22",
+      "id": 1
     },
     {
       "id": 2,
@@ -30,13 +30,6 @@
     },
     {
       "foto": "",
-      "nome": "Sydney",
-      "pais": "Australia",
-      "pop": "5",
-      "id": 6
-    },
-    {
-      "foto": "",
       "nome": "Jakarta",
       "pais": "Indonesia",
       "pop": "30",
@@ -55,6 +48,13 @@
       "pais": "India",
       "pop": "28",
       "id": 9
+    },
+    {
+      "foto": "",
+      "nome": "Paris",
+      "pais": "France",
+      "pop": "10",
+      "id": 10
     }
   ]
 }

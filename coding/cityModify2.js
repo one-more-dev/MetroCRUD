@@ -12,7 +12,7 @@ async function editCity(ref){
     for(var item=0; item<city.length; item++){
         const i = item;
         console.log(city[i]);
-        city[i].addEventListener("click", ()=>
+        city[i].addEventListener("dblclick", ()=>
             {callPopup("Edit","PUT",cards[i]["id"]);
             if(callPopup){
                 document.querySelector(".fFoto").value = city[i].getElementsByTagName("img")[0].innerText;

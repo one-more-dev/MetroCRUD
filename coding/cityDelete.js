@@ -10,7 +10,7 @@ async function deleteCity(){
 
     for(var i=0; i<item.length; i++){
         const n = i;
-        item[n].addEventListener("dblclick", ()=> {
+        item[n].addEventListener("contextmenu", ()=> {
             let janela = confirm("Do you want to delete it");
             if(janela == true){
                 window.alert(`${cards[n]["nome"]} is being deleted`);
