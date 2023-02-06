@@ -3,13 +3,13 @@ import { insertCard } from "./main.js";
 const btn = document.querySelector(".inserir");
 
 
-function newCityWindow(){
+function newCityWindow(metodo){
     const ncwindow = document.createElement("div");
     ncwindow.className = "newcity";
     ncwindow.innerHTML = `
     <form data-formulario>
         <div class="form_title">
-            <h1>Insert a new city</h1>
+            <h1>${metodo} a city</h1>
         </div>
         <div class="form_body">
             <p><label>Load a photo: </label><input type="file" class="fFoto" style="width: 100px"></p>
@@ -26,7 +26,7 @@ function newCityWindow(){
 }
 
 
-async function insertCardValues(evento){
+async function insertCardValues(evento,putpost,item){
     evento.preventDefault();
     
     const photoField = document.querySelector(".fFoto").value;
@@ -35,8 +35,7 @@ async function insertCardValues(evento){
     const popField = document.querySelector(".fPop").value;
 
     try{
-        console.log(photoField,nameField,countryField,popField);
-        insertCard(photoField,nameField,countryField,popField);
+        insertCard(putpost,item,photoField,nameField,countryField,popField);
     }catch(erro){
         console.log(`This is the error: ${erro}`);
         window.alert("Some empty field, maybe?");
@@ -44,19 +43,23 @@ async function insertCardValues(evento){
 }
 
 
-function buttonAction(referencia,corpo){
+function buttonAction(referencia,corpo,putpost,itemEditar){
     const botao = document.querySelector(referencia);
     const acao = document.createElement("script");
-    acao.innerText = botao.addEventListener("submit", evento => insertCardValues(evento));
+    acao.innerText = botao.addEventListener("submit", evento =>
+        insertCardValues(evento,putpost,itemEditar));
     return corpo.appendChild(acao);
 }
 
 
-function callPopup(){
+function callPopup(metodo,putpost,itemEditar=""){
     const popupwindow = document.getElementsByTagName("body")[0];
-    popupwindow.appendChild(newCityWindow());
-    buttonAction("[data-formulario]",popupwindow);
+    popupwindow.appendChild(newCityWindow(metodo));
+    buttonAction("[data-formulario]",popupwindow,putpost,itemEditar,itemEditar);
 }
 
 
-btn.addEventListener("click", ()=> callPopup());
+btn.addEventListener("click", ()=> callPopup("Insert","POST"));
+
+
+export { callPopup }

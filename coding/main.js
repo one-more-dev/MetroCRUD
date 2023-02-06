@@ -1,4 +1,3 @@
-
 //  LOAD THE OBJECTS IN JSON
 async function loadCard(){
     const conexion = await fetch(`http://localhost:3000/cidades`);
@@ -7,10 +6,10 @@ async function loadCard(){
 }
 
 
-//  INSERT NEW OBJECTS IN JSON
-async function insertCard(imgdacidade="",nomedacidade,pais,populacao){
-    const conexion = await fetch(`http://localhost:3000/cidades`,
-        { method: `POST`,
+//  INSERT OR EDIT NEW OBJECTS IN JSON
+async function insertCard(metodo,id,imgdacidade="",nomedacidade,pais,populacao){
+    const conexion = await fetch(`http://localhost:3000/cidades/${id}`,
+        { method: `${metodo}`,
         headers:{ "Content-type" : "application/json" },
         body:JSON.stringify({
             foto: imgdacidade,
@@ -23,6 +22,8 @@ async function insertCard(imgdacidade="",nomedacidade,pais,populacao){
     return conexionConverted;
 }
 
+
+//async function updateCard(item,element)
 
 
 

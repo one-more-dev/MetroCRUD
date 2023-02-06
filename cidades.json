@@ -22,10 +22,10 @@
       "pop": 22
     },
     {
-      "foto": "",
+      "foto": "C:\\fakepath\\seoul.jpg",
       "nome": "Seoul",
       "pais": "South Korea",
-      "pop": "25",
+      "pop": "26",
       "id": 4
     },
     {
@@ -41,6 +41,20 @@
       "pais": "Indonesia",
       "pop": "30",
       "id": 7
+    },
+    {
+      "foto": "",
+      "nome": "Shangai City",
+      "pais": "China",
+      "pop": "25",
+      "id": 8
+    },
+    {
+      "foto": "",
+      "nome": "Delhi",
+      "pais": "India",
+      "pop": "28",
+      "id": 9
     }
   ]
 }

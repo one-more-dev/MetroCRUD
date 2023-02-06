@@ -1,19 +1,25 @@
-//  PRIMEIRAMENTE, vamos realizar as ações por clique (FEITO)
-//  SEGUNDO, individualizar essas ações pra cada item: cada um deve ter algo diferente (FEITO)
+/*
 
-//  TERCEIRO, permitir a edição do item que eu clico
+UPDATE MODULE, USELESS FOR A WHILE
 
+*/
 
 var interactiveText = (ref) => {
 
-    const cityText = document.querySelectorAll(ref);    
-    for(var item=0; item < cityText.length; item++){
+    const cityText = document.querySelectorAll(ref);
+    //const city = document.querySelectorAll(`.cidade ${img ou p}`);
+    const cc = document.querySelectorAll(".cidade")[0];
+    console.log(cc.getElementsByTagName("p")[0]);
+
+
+    for(var item=0; item<cityText.length; item++){
         const i = item;
-        console.log(i,cityText[i].innerText);
-        cityText[item].addEventListener("dblclick", ()=> 
-            editText(ref,i,cityText[i].innerText,cityText[i]));
+        cityText[i].addEventListener("dblclick", ()=>
+            {editText(ref,i,cityText[i].innerText,cityText[i]),
+            window.alert(i)});
     }
 }
+
 
 
 function editText(elemento,x=0,textointerno,caller){
